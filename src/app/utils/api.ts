@@ -30,3 +30,17 @@ export async function getPlan(id: string) {
 export async function deletePlan(id: string) {
   await fetch(`${BASE}/plans/${id}`, { method: 'DELETE' });
 }
+
+export async function getDayPlan(planId: string, dayNumber: string) {
+  const res = await fetch(`${BASE}/plans/${planId}/day/${dayNumber}`);
+  if (!res.ok) throw new Error('Failed to fetch day plan');
+  return res.json();
+}
+
+export async function getDayExplanation(planId: string, dayNumber: string) {
+  const res = await fetch(`${BASE}/plans/${planId}/day/${dayNumber}/explain`, {
+    method: 'POST',
+  });
+  if (!res.ok) throw new Error('Failed to fetch explanation');
+  return res.json();
+}
