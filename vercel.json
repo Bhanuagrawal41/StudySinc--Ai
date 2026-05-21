@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
-  "installCommand": "npm install --production=false",
-  "buildCommand": "npm run build"
+  "installCommand": "npm ci",
+  "buildCommand": "npx vite build --force"
 }
