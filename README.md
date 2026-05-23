@@ -1,7 +1,6 @@
 
   # AI Study Planner for Engineers
 
-  This is a code bundle for AI Study Planner for Engineers. The original project is available at https://www.figma.com/design/5rPAl940tkPHhAsDwE7vXl/AI-Study-Planner-for-Engineers.
 
   ## Running the code
 
