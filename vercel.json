@@ -3,5 +3,5 @@
     { "source": "/(.*)", "destination": "/" }
   ],
   "installCommand": "npm install",
-  "buildCommand": "npx vite build --force"
+  "buildCommand": "vite build"
 }
