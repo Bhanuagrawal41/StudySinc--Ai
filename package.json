@@ -76,6 +76,7 @@
     "vaul": "1.1.2"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "nodemon": "^3.1.14",
