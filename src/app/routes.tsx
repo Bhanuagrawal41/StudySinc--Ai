@@ -26,7 +26,8 @@ import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { CreatePlan } from "./pages/CreatePlan";
 import { PlanView } from "./pages/PlanView";
-import { DayView } from "./pages/dayview";
+// import { DayView } from "./pages/dayview";
+import { DayView } from "./pages/DayView"; 
 import { Plans } from "./pages/Plans";
 import { Settings } from "./pages/Settings";
 
