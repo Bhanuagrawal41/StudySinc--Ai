@@ -74,10 +74,11 @@ Generate one explanation object for each topic: ${dayData.topics.join(', ')}.
 `;
 
     const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
+      model: 'openai/gpt-oss-120b',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.5,
-      max_tokens: 4096,
+      max_tokens: 1500,
+      response_format: { type: "json_object" }
     });
 
     const rawText = completion.choices[0].message.content;

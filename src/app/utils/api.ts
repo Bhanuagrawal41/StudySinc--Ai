@@ -1,6 +1,5 @@
-// const BASE = 'http://localhost:3001/api';
-
-const BASE = `${import.meta.env.VITE_API_URL}/api`;
+const API_HOST = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const BASE = `${API_HOST}/api`;
 
 export async function generatePlan(data: {
   subject: string;
@@ -14,7 +13,10 @@ export async function generatePlan(data: {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
-  if (!res.ok) throw new Error('Failed to generate plan');
+  if (!res.ok) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Failed to generate plan');
+  }
   return res.json();
 }
 

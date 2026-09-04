@@ -26,7 +26,7 @@ export function CreatePlan() {
       });
       navigate(`/plan/${plan.id}`);
     } catch (err) {
-      setError("Failed to generate plan. Please try again.");
+      setError((err as Error).message || "Failed to generate plan. Please try again.");
     } finally {
       setIsGenerating(false);
     }
